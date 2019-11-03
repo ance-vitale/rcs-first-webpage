@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="head.css">
+    <title>The Cookbook</title>
+</head>
+<body> -->
+    
+<nav>
+
+<div class="logo"> 
+<h3>The Cookbook</h3>
+</div>
+<ul class="nav-links">
+<li><a href="Main.html">Home</a></li>
+<li><a href="about_us.html">About</a></li>
+<li><a href="recipes.html">Recipes</a></li>
+<li><a href="regiter.html">Register</a></li>
+<li><a href="chat.html">Chat</a></li>
+</ul>
+
+<div class="burger">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+</div>
+
+</nav>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.logo{
+    color: rgb(226,226,226);
+    letter-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5d4954;
+}
+.nav-links{
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: rgb(226,226,226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: rgb(226,226,226);
+    margin: 5px;
+    transition: all 0.2s ease;
+}
+@media screen and (max-width:1111px){
+    .nav-links{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:767px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right:0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5d4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0%)
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+</style>
+<script>
+  const navSlide = () => {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links li")
+
+    
+    burger.addEventListener("click", ()=>{
+        // Toggle nav
+        nav.classList.toggle("nav-active");
+
+        // Animate links
+        navLinks.forEach((link, index)=>{
+        if(link.style.animation){
+            link.style.animation = "";
+        }
+        else{
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index/ 7 + 1}s`;
+        }
+    });
+    // Burger animation
+    burger.classList.toggle("toggle");
+    });
+
+}
+
+navSlide();
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>        
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="head.js" type="text/javascript"></script> -->
+<!-- </body>
+</html> --> 

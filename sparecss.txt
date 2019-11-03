@@ -1,0 +1,22 @@
+.col{
+    background-color: lightgray;
+}
+.header{
+    background-color: white;
+}
+.articles img{
+    width: 100%;
+}
+.nav-pills .nav-link .active{
+    background-color: rosybrown;
+    color: white;
+}
+.nav-pills .nav-link{
+    opacity: 0.5;
+    background-color: rosybrown;
+    border-color: rgb(139, 97, 97);
+    color: white;
+}
+.content img{
+    height: 400px;
+}

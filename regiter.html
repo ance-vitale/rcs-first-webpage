@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="register.css">
+    <title>The Cookbook</title>
+</head>
+
+<body>
+    <div id="header_container" class="header"></div>
+    <div class=“container”>
+
+
+        <form id="registration_form" method="POST">
+
+            <div><label for="first_name">Name:</label></div>
+            <div><input type="text" name="first_name" id="first_name" placeholder="your name"></div>
+
+            <div><label for="last_name">Surname:</label></div>
+            <div><input type="text" name="last_name" id="last_name" placeholder="your surname"></div>
+
+            <div><label for="match_one">Password:</label></div>
+            <div><input type="password" name="password" id="password" placeholder="password"></div>
+
+            <div><label for="match_two">Repeat password:</label></div>
+            <div><input type="password" name="password2" id="password2" placeholder="password"></div>
+
+            <div><label for="user_email">Email:</label></div>
+            <div><input type="email" name="email" id="email" placeholder="youremail@email.com"></div>
+
+            <label>Select your country:</label><br>
+            <select name="country" id="country">
+                <option value="austria">Austria</option>
+                <option value="belgium">Belgium</option>
+                <option value="bulgaria">Bulgaria</option>
+                <option value="croatia">Croatia</option>
+                <option value="denmark">Denmark</option>
+                <option value="estonia">Estonia</option>
+                <option value="finland">Finland</option>
+                <option value="germany">Germany</option>
+                <option value="latvia">Latvia</option>
+                <option value="uk">UK</option>
+            </select><br>
+            <div>
+                <input type="checkbox" name="checkbox">
+                <label>I have read and agree to the <a href="parts/noteikumi.html" target="blank">terms and
+                        conditions</a></label>
+            </div> <br>
+            <div>
+                <button type="sumbit" class="btn btn-secondary">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="register.js" type="text/javascript"></script>
+</body>
+
+</html>
